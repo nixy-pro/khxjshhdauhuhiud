@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Gaya Instagram</title>
+    <title>Galeri Toko Bunga Cianjur</title>
     <style>
         /* Reset */
         * {
@@ -19,19 +19,19 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            padding: 20px;
         }
 
-        /* Container Galeri */
+        /* Kontainer Galeri */
         .gallery {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             max-width: 600px;
             width: 100%;
-            padding: 20px;
         }
 
-        /* Setiap Item Galeri */
+        /* Item Galeri */
         .gallery-item {
             background-color: white;
             border-radius: 10px;
@@ -40,48 +40,57 @@
             text-align: center;
         }
 
+        /* Navigasi Judul */
+        .title-bar {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            margin: 15px;
+            text-align: center;
+        }
+
         /* Gambar */
         .gallery-item img {
             width: 100%;
             height: auto;
-            transition: transform 0.3s;
         }
 
-        /* Efek Hover */
-        .gallery-item img:hover {
-            transform: scale(1.05);
+        /* Deskripsi */
+        .description {
+            padding: 15px;
+            font-size: 14px;
+            color: #555;
         }
 
-        /* Nama Gambar */
-        .gallery-item .caption {
-            padding: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            color: #333;
+        /* Tombol 3D "Kunjungi Toko" */
+        .button-container {
+            padding: 15px;
+            text-align: center;
         }
 
-        /* Tombol Gaya Instagram */
-        .gallery-item .button-container {
-            padding: 10px;
-        }
-
-        .gallery-item .insta-button {
+        .button-3d {
             background-color: #3897f0;
             color: white;
-            padding: 8px 16px;
+            padding: 10px 20px;
             font-size: 14px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .gallery-item .insta-button:hover {
+        .button-3d:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             background-color: #3186d6;
-            transform: scale(1.05);
         }
 
-        /* Responsif untuk perangkat seluler */
+        /* Responsif */
         @media (max-width: 600px) {
             .gallery {
                 grid-template-columns: 1fr;
@@ -94,17 +103,25 @@
     <!-- Galeri Gambar -->
     <div class="gallery">
         <div class="gallery-item">
+            <!-- Navigasi Judul -->
+            <div class="title-bar">Toko Bunga Cianjur</div>
             <img src="1.jpg" alt="Gambar 1">
-            <div class="caption">Nama Gambar 1</div>
+            <!-- Deskripsi -->
+            <div class="description">Deskripsi singkat tentang gambar atau produk di toko bunga Cianjur.</div>
+            <!-- Tombol 3D -->
             <div class="button-container">
-                <button class="insta-button">Sukai</button>
+                <a href="#" class="button-3d">Kunjungi Toko</a>
             </div>
         </div>
         <div class="gallery-item">
+            <!-- Navigasi Judul -->
+            <div class="title-bar">Toko Bunga Cianjur</div>
             <img src="2.jpg" alt="Gambar 2">
-            <div class="caption">Nama Gambar 2</div>
+            <!-- Deskripsi -->
+            <div class="description">Deskripsi singkat tentang gambar atau produk di toko bunga Cianjur.</div>
+            <!-- Tombol 3D -->
             <div class="button-container">
-                <button class="insta-button">Sukai</button>
+                <a href="#" class="button-3d">Kunjungi Toko</a>
             </div>
         </div>
     </div>
