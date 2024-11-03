@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Gaya Instagram</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Container Galeri */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Setiap Item Galeri */
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Gambar */
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        /* Efek Hover */
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Nama Gambar */
+        .gallery-item .caption {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Tombol Gaya Instagram */
+        .gallery-item .button-container {
+            padding: 10px;
+        }
+
+        .gallery-item .insta-button {
+            background-color: #3897f0;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .gallery-item .insta-button:hover {
+            background-color: #3186d6;
+            transform: scale(1.05);
+        }
+
+        /* Responsif untuk perangkat seluler */
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Galeri Gambar -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="1.jpg" alt="Gambar 1">
+            <div class="caption">Nama Gambar 1</div>
+            <div class="button-container">
+                <button class="insta-button">Sukai</button>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="2.jpg" alt="Gambar 2">
+            <div class="caption">Nama Gambar 2</div>
+            <div class="button-container">
+                <button class="insta-button">Sukai</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
